@@ -1,0 +1,45 @@
+.nav {
+  padding:20px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 100%;
+  align-items: center;
+}
+
+.label-counter{
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.list-item{
+  margin: 0 10px 0 10px;
+  display: inline;
+  list-style-type: none;
+}
+
+li {
+  list-style-type: none;
+}
+.toggle-label {
+  padding:20px;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  display: inline;
+  padding: 10px
+}
+
+.retrain-buttons{
+  display:inline;
+  padding-left: 20px;
+
+}
+
+ul {
+  padding:10px;
+}
