@@ -1,0 +1,15 @@
+version: '3'
+services:
+  square-api:
+    build: ./square-api
+    container_name: square-api
+    ports:
+      - 8001:8001
+
+  square-ui:
+    build: ./square-ui
+    container_name: square-ui
+    ports:
+      - 80:80
+    links:
+      - square-api
