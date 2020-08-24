@@ -27,9 +27,11 @@ Now the backend should be ready to serve api requests
 To run the frontend application, these are the commands you need to run:
 ```bash
 cd square-app/square-ui
+npm ci
 npm start
 ```
 A browser should be up and running the frontend application
+Make sure the backend is up and running if you want to send requests to the backend
 
 ## Setup (Production)
 ### Docker-compose
