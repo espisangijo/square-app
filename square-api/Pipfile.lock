@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "2f773e0598f3dd3c99cea95392b99fbd0195ed97d5af326ab373d8b86121bd33"
+            "sha256": "2173d96029e58f17e756632819bd2d8142ef6d0e82cc3f2e292ae8216c240706"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -178,6 +178,13 @@
             ],
             "index": "pypi",
             "version": "==1.1.7"
+        },
+        "falcon-swagger-ui": {
+            "hashes": [
+                "sha256:2514e6cb403e87e49a1527764cf090c82885185cc650b7ab5cefa8ebe89af8b8"
+            ],
+            "index": "pypi",
+            "version": "==1.2.1"
         },
         "gunicorn": {
             "hashes": [
