@@ -25,16 +25,17 @@ Now the backend should be ready to serve api requests
 
 ### Frontend
 To run the frontend application, these are the commands you need to run:
+(node version 12.18.3)
 ```bash
 cd square-app/square-ui
-npm ci
+npm install
 npm start
 ```
 A browser should be up and running the frontend application
 Make sure the backend is up and running if you want to send requests to the backend
 
 ## Setup (Production)
-### Docker-compose
+### Docker-compose (Under maintenance)
 Docker compose is a tool for defining and running multi-container Docker applications. In this application, there are 2 containers. A container for the front-end and the back-end. By running the following command, it will build a docker image with the both containers ready for production stage.
 ```bash
 cd square-app
