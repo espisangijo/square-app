@@ -12,6 +12,7 @@ decorator==4.4.2
 defusedxml==0.6.0
 entrypoints==0.3
 falcon-cors==1.1.7
+falcon-swagger-ui==1.2.1
 falcon==2.0.0
 gunicorn==20.0.4
 idna==2.10
