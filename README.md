@@ -35,7 +35,7 @@ A browser should be up and running the frontend application
 Make sure the backend is up and running if you want to send requests to the backend
 
 ## Setup (Production)
-### Docker-compose (Under maintenance)
+### Docker-compose
 Docker compose is a tool for defining and running multi-container Docker applications. In this application, there are 2 containers. A container for the front-end and the back-end. By running the following command, it will build a docker image with the both containers ready for production stage.
 ```bash
 cd square-app
