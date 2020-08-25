@@ -3,7 +3,7 @@
 Inspired by GoodNotes, this project aims to solve the problem in creating squares in the application. Looking like an image data, intuitively people will work on it using image processing techniques in the feature engineering stage. However, one of the most valuable data is not taken into account when processing using aforementioned technique -- **_time_**. Time is essential in predicting whether a stroke results in a square or not.
 
 ## Scenario
-Consider this 2 cases, I draw a square very quickly, and draw an identical square very slowly, but a curve exists on the right-hand-side of the squares. The **time** affects the user's intention, whether they are drawing a square or not. Treating the problem as an image classification (e.g. using CNN) only captures the shape and will predict both of them as not a square since there is a curve on the side.
+Consider these 2 cases, I draw a square very quickly, and draw an identical square very slowly, but a curve exists on the right-hand-side of the squares. The **time** affects the user's intention, whether they are drawing a square or not. Treating the problem as an image classification (e.g. using CNN) only captures the shape and will predict both of them as not a square since there is a curve on the side.
 
 ## Feature Engineering
 To preserve its timeliness, we need to capture all the coordinates at every timestamp. To process the data, we can borrow a technique from text processing. **Truncation** (for long data, setting truncation threshold to e.g. covering 95% of normal distribution), **padding** (for short data, pad 0s to make the length similar), **interpolation** (get coordinates e.g. every 50ms, used to preserve the timeliness) and **normalization** (for faster training and normalizing initail drawing point to (0,0)) are the techniques commonly used in text processing that we can use in this prediction.
@@ -76,3 +76,11 @@ I used docker quite often to deploy my APIs. It's the most popular containerizat
 
 ### Miscellaneous
 For testing, I used PyTest because the syntax is better compared to Python's built-in unittest. Using decorators to add optional features makes PyTest better than unittest.
+
+## Further Development
+There are several things that can be improved on the machine learning side.
+1. There is a retraining feature in the application. SVM is relatively notorious for it's slow performance. Retrainingusing SVM  might eliminate the reason of having a web-based application.
+2. The data is very scarce. With only 200 data, where some of the non-squares are drawn similarly to squares, the model would not be able to predict it correctly. More data will be needed for this square prediction task.
+3. Use other methods to save models. The models are currently stored in file format. Expanding the system with HDFS or just simply a database will prevent the server to swell.
+4. More data points in each data. Currently for each drawing, only 60 points are placed on the line to track the coordinates at each time. Increasing the number of points will improve the performance, however will cause longer retraining and predicting (data preprocessing is used on both)
+5. More error catching. With limited development time, not all errors were catched. After few rounds of testing, both frontend and backend, hopefully the application will cover all errors.
